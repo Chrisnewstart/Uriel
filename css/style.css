@@ -1,0 +1,533 @@
+/* =============== Page index =============== */
+/* polices */
+.police1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+  
+.police2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em;
+}
+
+/* Enleve le padding crée par le navigateur */
+ul {
+  padding-inline-start: 0px;
+}
+
+/* Navigation avec image de fond */
+nav {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+  
+  .container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: transperent;
+  width: 100%;
+  height: 100px;
+  }
+  
+  .poiter {
+  cursor:pointer;
+  list-style-type: none;
+  }
+  
+  .poiter:hover > ul {
+  display: grid;
+  }
+  
+  .sous-liste {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  display: none; /* cache les sous-menu */
+  }
+  
+  .items-sous-liste:hover {
+    color:rgb(199, 19, 19);
+  }
+  
+  .itemlogo {
+  width: 120px;
+  }
+  
+  .container-image-backgroung-nav {
+  background-image: url("../img/divers/m.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: -15%;
+}
+
+.texte-container-image-backgroung-nav {
+  display: flex;
+  justify-content: center;
+  padding-top: 92vh;
+}
+  
+/* Taille img */
+.img-size-nav {
+  width: 100%;
+  height: 100%;
+}
+
+/* Slogan */
+.slogan-index {
+  display: grid;
+  text-align: center;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+  
+/* Presentation des préstations */
+.container-presentation-prestation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10em 10em 10em;
+}
+  
+.section {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+  
+.section-contact {
+  background-image: url("../img/divers/mbr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.section:hover {
+  transform: scale(1.1); /* scale agrandi l'image */
+}
+
+.section-blog {
+  background-image: url("../img/divers/cofee.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.section-paysage {
+  background-image: url("../img/paysage/jobourg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.section-portrait {
+  background-image: url("../img/portrait/angelina.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+
+.section-aventure {
+  background-image: url("../img/aventure/john.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.section-photographe {
+  background-image: url("../img/info/blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 4;
+  grid-row: 3;
+}
+  
+.survol-prestation .survol {
+  display: none;
+}
+
+.survol-prestation:hover .defaut {
+  display: none;
+}
+
+.survol-prestation:hover .survol {
+  display: initial;
+}
+
+/* Separation hr */
+hr {
+  border-top: 1px solid grey;
+  margin-top: 5%;
+}
+
+/* Container video */
+.video-container {
+  display: flex;
+  width: 70%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-bottom: 10%;
+  margin-left: auto;
+}
+
+.iframe-page-index {
+  width: 560px;
+  height: 315px;
+}
+
+.description-iframe {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  /* =============== Carrousel =============== */
+  .carrousel {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .container-images {
+    display: flex;
+    width: 100%;
+    animation-duration: 30s;
+    animation-name: diapo;
+    animation-iteration-count: infinite;
+    background-position: center;
+  }
+
+  img {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+
+  @keyframes diapo {
+    0% {
+      transform: translateX(-90vh);
+    }
+
+    10% {
+      transform: translateX(-90vh);
+    }
+
+    20% {
+      transform: translateX(-184vh);
+    }
+
+    30% {
+      transform: translateX(-184vh);
+    }
+
+    40% {
+      transform: translateX(-278vh);
+    }
+
+    50% {
+      transform: translateX(-278vh);
+    }
+
+    60% {
+      transform: translateX(-350vh);
+    }
+
+    70% {
+      transform: translateX(-350vh);
+    }
+
+    80% {
+      transform: translateX(-425vh);
+    }
+
+    90% {
+      transform: translateX(-425vh);
+    }
+
+    96% {
+      transform: translateX(-519vh);
+    }
+
+    100% {
+      transform: translateX(-519vh);
+    }
+  }
+
+  /* =============== Page paysage =============== */
+  .section-description-paysage {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    text-align: center;
+  }  
+
+  .citation-einstein {
+    text-align: justify;
+    text-align-last: right;
+    width: 60%;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-left: auto;
+  }
+
+  .nom-citation {
+    text-align: end;
+  }
+
+/* =============== Page portrait =============== */
+.disposition-grand-text {
+  display: flex;
+  justify-content: center;
+} 
+
+.container-presentation-prestation-portrait {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.section-portrait-tarif {
+  padding: 20px;
+  margin: 30px;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+
+.section-portrait-tarif:hover {
+  transform: scale(1.1); /* scale agrandi l'image */
+  transition-duration: 1s;
+}
+
+.survol-prestation-portrait .survol-2 {
+  display: none;
+
+}
+
+.survol-prestation-portrait:hover .defaut-portrait {
+  display: none;
+
+}
+
+.survol-prestation-portrait:hover .survol-2 {
+  display: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.design-survol {
+  color: rgb(9, 9, 9);
+  background-color: #ffffffc3;
+  width: 100%;
+  height: 100%;
+}
+
+.section-forfait1 {
+  background-image: url("../img/portrait/chic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 1;
+}
+
+.section-forfait2 {
+  background-image: url("../img/portrait/angelina.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 2;
+}
+
+.section-forfait3 {
+  background-image: url("../img/portrait/lol.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  grid-column: 3;
+}
+
+.margin-p {
+  margin: 3%;
+}
+
+/* =============== Bouton en savoir plus =============== */
+.savoirplus {
+  cursor:pointer;
+  color: rgb(143, 143, 143);
+  background: white;
+  border: 1px solid rgb(186, 186, 186);
+  border-style: thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  width: 50vh;
+  height: 10vh;
+}
+
+.savoirplus:hover {
+  color: white;
+  background: rgb(131, 131, 131);
+  transition-duration: 0.5s;
+}
+
+.position-bouton {
+  padding-top: 1%;
+  padding-bottom: 7%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =============== Blog =============== */
+.blog {
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto 50px auto 100px;
+  grid-template-columns: auto 50px auto;
+  grid-template-areas: "blog1 . blog2"
+                       ". . ."
+                       "blog3 . blog4"
+                       ". . .";
+}
+
+.buttonblog {
+  cursor:pointer;
+  background: none;
+  border: none;
+  color: rgba(255, 0, 0, 0);
+  padding-top: 20%;
+  padding-right: 30%;
+  padding-bottom: 20%;
+  padding-left: 30%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.buttonblog:hover {
+  background: rgba(255, 255, 255, 0.84);
+  transition-duration: 0.3s;
+  color: rgb(21, 21, 21);
+}
+
+.blog1 {
+  color: rgb(143, 143, 143);
+  background-image: url("../img/animaux/oiseaux\ blanc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid rgb(186, 186, 186);
+  border-style: thin;
+  font-size: 15px;
+  letter-spacing: 7px;
+
+}
+
+.blog2 {
+  color: rgb(143, 143, 143);
+  background: url("../img/blog/fayylaise.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid rgb(186, 186, 186);
+  border-style: thin;
+  font-size: 15px;
+  letter-spacing: 7px;
+}
+
+.blog3 {
+  color: rgb(143, 143, 143);
+  background: url("../img/blog/IMG_3987.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid rgb(186, 186, 186);
+  border-style: thin;
+  font-size: 15px;
+  letter-spacing: 7px;
+}
+
+.blog4 {
+  color: rgb(143, 143, 143);
+  background-image: url("../img/animaux/kangourou.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1px solid rgb(186, 186, 186);
+  border-style: thin;
+  font-size: 15px;
+  letter-spacing: 7px;
+}
+
+.blog1{grid-area:blog1;}
+.blog2{grid-area:blog2;}
+.blog3{grid-area:blog3;}
+.blog4{grid-area:blog4;}
+  /* =============== Pied de page =============== */
+  footer {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: auto 600px auto;
+    color: rgb(203, 196, 196);
+    background: rgb(227, 227, 227);
+    height: 150px;
+  }
+  
+  
+  .foot1 {
+    color: black;
+    font-size: 15px;
+  }
+  
+  .foot2 {
+    font-size: 15px;
+    border: none;
+    background: none;
+    color: rgb(21, 21, 21);
+  }
+  
+  .foot3 {
+    background: white;
+    padding-top: 10%;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 5%;
+  }
