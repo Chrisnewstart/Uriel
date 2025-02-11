@@ -26,14 +26,23 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home'; // Page par defaut est ho
 
 // Inclure le contenu spécifique à la page
 switch ($page) {
-  case 'portrait':
-    include('portrait.php');
-    break;
   case 'paysage' :
     include('paysage.php');
     break;
-  case 'blog' :
-    include('blog.php');
+  case 'portrait':
+    include('portrait.php');
+    break;
+  case 'aventure' :
+    include('aventure.php');
+    break;
+  case 'animaux' :
+    include('animaux.php');
+    break;
+  case 'sport' :
+    include('sport.php');
+    break;
+  case 'contact' :
+    include('contact.php');
     break;
   case 'home' :
   default:

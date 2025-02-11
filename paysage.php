@@ -35,7 +35,7 @@
     <br>Les images que je propose libèrent des couleurs saturées afin de capter le regard mais aussi, quand elles sont
     exposées,
     <br> de rendre une pièce beaucoup plus dynamique avec plus de force ou de douceur selon l'image choisie.
-    <br>Vous pouvez retrouver mes tirages photo en cliquant ci dessous, ainsi que quelques aperçus clients.
+    <br>Vous pouvez commander des tirages photo en nous contactant cliquant ci dessous.
   </p>
   <section class="citation-einstein">
   <q class="police2"><i>Regarder profondément dans la nature, et alors vous comprendrez tout beaucoup mieux</i></q>
