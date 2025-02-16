@@ -1,30 +1,9 @@
+<script>
+  // Valeur constante pour charger photo du dossier souhaiter
+  const nameGalerie = 'paysage';
+</script>
 
-  <section class="carrousel">
-    <div class="container-images">
-      <!-- 1080 x 566 px ou 16:9 ou les deux qui on l'ai le mieux : 1280 x 720 px ou 1920 x 1081 px -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="femme reussite">
-      <!-- 1080 x 566 px ou 16:9 ou les deux qui on l'ai le mieux : 1280 x 720 px ou 1920 x 1081 px  -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="Robe mauve">
-      <!-- A2 (42 x 59,4 cm) : Résolution idéale de 300 DPI -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="frere & soeur">
-      <!-- 1080 x 566 px ou 16:9 ou les deux qui on l'ai le mieux : 1280 x 720 px ou 1920 x 1081 px  -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="numero 9">
-      <!-- 1080 x 566 px ou 16:9 ou les deux qui on l'ai le mieux : 1280 x 720 px ou 1920 x 1081 px  -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="lumiere sombre">
-      <!-- petite -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="femme reussite">
-      <!-- 1080 x 566 px ou 16:9 ou les deux qui on l'ai le mieux : 1280 x 720 px ou 1920 x 1081 px  -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqRTxOP0-CJ_T69vtXudr_elPuCc_fmYqcA&s"
-        alt="Robe mauve">
-    </div>
-    </div>
-  </section><br>
+<?php include('includes/carrousel.php') ?>
 
   <section class="section-description-paysage">
   <p class="police2">

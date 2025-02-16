@@ -1,3 +1,18 @@
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-galery1 {
+  width: 500px;
+  height: 100%;
+}
 /* =============== Page index =============== */
 /* polices */
 .police1 {
@@ -152,7 +167,7 @@ nav {
 }
 
 .section-paysage {
-  background-image: url("../img/paysage/jobourg.png");
+  background-image: url("../img/paysage/image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -162,7 +177,7 @@ nav {
 }
 
 .section-portrait {
-  background-image: url("../img/portrait/angelina.png");
+  background-image: url("../img/portrait/image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -252,7 +267,12 @@ hr {
   }
 
   img {
-margin: 2%;
+    width: 100%;  /* Ajuste la largeur au conteneur */
+    height: 100%; /* Ajuste la hauteur au conteneur */
+    object-fit: cover; /* Remplit le conteneur sans déformation */
+    object-position: center; /* Centre l’image comme background-position */
+    display: block; /* Évite l’espace sous l’image */
+    margin: 2%;
   }
 
 
@@ -306,12 +326,33 @@ margin: 2%;
     }
   }
 
-  /* =============== Page paysage =============== */
-  .section-description-paysage {
-    margin-top: 7%;
-    margin-bottom: 7%;
-    text-align: center;
-  }  
+/* =============== Galerie d'images =============== */
+.container-galerie-image {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: 2% 2%;        
+}
+.gallery .img-galerie {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* =============== Page paysage =============== */
+.section-description-paysage {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  text-align: center;
+}  
 
   .citation-einstein {
     text-align: justify;
@@ -383,7 +424,7 @@ margin: 2%;
 }
 
 .section-forfait1 {
-  background-image: url("../img/portrait/chic.jpg");
+  background-image: url("../img/portrait/image4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -392,7 +433,7 @@ margin: 2%;
 }
 
 .section-forfait2 {
-  background-image: url("../img/portrait/angelina.png");
+  background-image: url("../img/portrait/image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -401,7 +442,7 @@ margin: 2%;
 }
 
 .section-forfait3 {
-  background-image: url("../img/portrait/lol.jpg");
+  background-image: url("../img/portrait/image3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -415,8 +456,9 @@ margin: 2%;
 
 /* =============== Page Aventure =============== */
 .img-presentation-aventure {
-  height: 43em;
-}
+  height: 100vh;
+  width: auto;
+  margin: 0%;}
 
 .titre-aventure {
   margin-top: 5%;
@@ -485,7 +527,7 @@ margin: 2%;
   margin-left: 15px;
 }
 
-.button {
+.button-savoir-plus {
   background: rgb(241, 220, 209);
   color: #514e4e;
   padding: 10px 15px;
@@ -499,8 +541,80 @@ margin: 2%;
   background: #ccc;
   margin: 10px 0;
 }
+/* =============== Bouton javascript galerie photo =============== */
+.modal {
+ /* position: fixed;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Effet flou */
+  display: flex;
+  display: none; /* Caché par défaut */
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 80%;
+}
 
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+/* =============== Bouton galerie photo ================*/
+.bouton-galerie-photo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  color: black;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 50px;
+  transition: all .25s;
+}
+
+.bouton-galerie-photo::after, .bouton-galerie-photo::before {
+  border: 1px solid black;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .25s;
+}
+
+.bouton-galerie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 1%;
+}
+
+.bouton-galerie-photo:hover::after {
+transform: translate(-5px, -5px);
+}
+
+.bouton-galerie-photo:hover::before {
+transform: translate(5px, 5px);
+}
 /* =============== Bouton en savoir plus =============== */
 .savoirplus {
   cursor:pointer;
@@ -527,90 +641,33 @@ margin: 2%;
   justify-content: center;
 }
 
-/* =============== Blog =============== */
-.blog {
-  display: grid;
-  align-items: center;
-  grid-template-rows: auto 50px auto 100px;
-  grid-template-columns: auto 50px auto;
-  grid-template-areas: "blog1 . blog2"
-                       ". . ."
-                       "blog3 . blog4"
-                       ". . .";
-}
-
-.buttonblog {
-  cursor:pointer;
-  background: none;
-  border: none;
-  color: rgba(255, 0, 0, 0);
-  padding-top: 20%;
-  padding-right: 30%;
-  padding-bottom: 20%;
-  padding-left: 30%;
-  margin-left: 7%;
-  margin-right: 7%;
-}
-
-.buttonblog:hover {
-  background: rgba(255, 255, 255, 0.84);
-  transition-duration: 0.3s;
-  color: rgb(21, 21, 21);
-}
-
-.blog1 {
-  color: rgb(143, 143, 143);
-  background-image: url("../img/animaux/oiseaux\ blanc.jpg");
-  background-position: center;
+/* =============== Sport =============== */
+.section-forfait-sport1 {
+  background-image: url("../img/sport/image3.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  border: 1px solid rgb(186, 186, 186);
-  border-style: thin;
-  font-size: 15px;
-  letter-spacing: 7px;
-
-}
-
-.blog2 {
-  color: rgb(143, 143, 143);
-  background: url("../img/blog/fayylaise.jpg");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border: 1px solid rgb(186, 186, 186);
-  border-style: thin;
-  font-size: 15px;
-  letter-spacing: 7px;
+  color: #fff;
+  grid-column: 1;
 }
 
-.blog3 {
-  color: rgb(143, 143, 143);
-  background: url("../img/blog/IMG_3987.JPG");
+.section-forfait-sport2 {
+  background-image: url("../img/sport/image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border: 1px solid rgb(186, 186, 186);
-  border-style: thin;
-  font-size: 15px;
-  letter-spacing: 7px;
+  color: #fff;
+  grid-column: 2;
 }
 
-.blog4 {
-  color: rgb(143, 143, 143);
-  background-image: url("../img/animaux/kangourou.jpg");
+.section-forfait-sport3 {
+  background-image: url("../img/sport/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border: 1px solid rgb(186, 186, 186);
-  border-style: thin;
-  font-size: 15px;
-  letter-spacing: 7px;
+  color: #fff;
+  grid-column: 3;
 }
-
-.blog1{grid-area:blog1;}
-.blog2{grid-area:blog2;}
-.blog3{grid-area:blog3;}
-.blog4{grid-area:blog4;}
 
 /* ==================== Contact ==================== */
 .background-form-contact {
@@ -679,8 +736,12 @@ footer {
   background: rgb(227, 227, 227);
   height: 150px;
 }
-  
-  
+
+.img-footer {
+  width: 100px;
+  display: initial;
+}
+
 .foot1 {
   color: black;
   font-size: 15px;

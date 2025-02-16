@@ -1,6 +1,4 @@
-<section >
-
-  <!-- navigation pc -->
+<!-- navigation pc -->
   <nav>
   <ul class="container-nav police1">
     <li class="poiter"><a href="?page=paysage">paysage</a></li>
@@ -13,4 +11,3 @@
   </ul>
   </nav>
 
-</section>

@@ -1,7 +1,7 @@
-<section class="container-image-backgroung-nav">
+<div class="container-image-backgroung-nav">
 <h1 class="texte-container-image-backgroung-nav police1">Photographe portrait & paysage </h1>
+</div>
 
-</section>
   <section class="slogan-index">
     <p class="police2">Laissez-vous guider</p>
     <h2 class="police1">Exprimez vos émotions</h2>

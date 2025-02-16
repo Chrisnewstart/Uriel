@@ -57,7 +57,7 @@ de partager ensemble la même passion pour la nature & randonnée, pour repartir
             <em>ERA : The Live Experience</em><br>
             mercredi
         </div>
-        <a href="?page=contact" class="button">Réservation</a>
+        <a href="?page=contact" class="button-savoir-plus">Réservation</a>
     </div>
     <div class="separator"></div>
     <div class="event">
@@ -71,7 +71,7 @@ de partager ensemble la même passion pour la nature & randonnée, pour repartir
             <em>ERA : The Live Experience</em><br>
             jeudi
         </div>
-        <a href="?page=contact" class="button">Réservation</a>
+        <a href="?page=contact" class="button-savoir-plus">Réservation</a>
     </div>
     <div class="separator"></div>
     <div class="event">
@@ -85,7 +85,7 @@ de partager ensemble la même passion pour la nature & randonnée, pour repartir
             <em>ERA : The Live Experience</em><br>
             samedi
         </div>
-        <a href="?page=contact" class="button">Réservation</a>
+        <a href="?page=contact" class="button-savoir-plus">Réservation</a>
         </section><br>
 
 <aside class="position-bouton">

@@ -11,12 +11,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-  <script src="../js"defer ></script>
+  <script src="js/smooth.js"defer ></script>
+  <script src="js/galerie-photo.js"defer ></script>
 </head>
 <body>
 
 <header>
-  <?php include('includes/navbar.php'); ?>
+<?php include('includes/navbar.php'); ?>
 </header> 
 
 <main>
