@@ -13,27 +13,28 @@ section.show {
   width: 500px;
   height: 100%;
 }
+
 /* =============== Page index =============== */
 /* polices */
 .police1 {
   font-family: 'Cinzel', serif;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: normal;
 }
   
 .police2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5em;
+  font-size: 2.2em;
 }
 
 .police3 {
   font-family: 'Cinzel', serif;
-  font-size: 1em;
+  font-size: 1.7em;
 }
 
 .police4 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: azure;
 }
 
@@ -65,7 +66,7 @@ a {
   color: black;
 }
 
-/* Navigation avec image de fond */
+/* =============== Navigation avec image de fond + responsive =============== */
 nav {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -101,7 +102,7 @@ nav {
   background-position: center;
   width: 100%;
   height: 100vh;
-  margin-top: -15%;
+  margin-top: -17%;
 }
 
 .texte-container-image-backgroung-nav {
@@ -115,6 +116,84 @@ nav {
   width: 100%;
   height: 100%;
 }
+
+/* Menu deroulant */
+.section-menu-deroulant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+  height: 10em;
+  background: #00000000;
+  color: #333030;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.menu-icon {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.nav-menu-deroulant {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* Explication du problème (z-index)
+  Ton menu de navigation est affiché derrière d'autres éléments, notamment le carrousel.
+  Cela signifie que son z-index est inférieur à celui du carrousel ou que le carrousel est dans un conteneur qui a un z-index plus élevé.*/
+  z-index: 9999; /* Valeur très élevée pour être au-dessus de tout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-content {
+  background-image: url("../img/divers/fond-menu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  padding: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.menu-content .ul-deroulant {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-content .ul-deroulant .li-deroulant {
+  margin: 50px 0;
+}
+
+.menu-content .ul-deroulant .li-deroulant .a-deroulant {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3f3c3c;
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 70px;
+  cursor: pointer;
+  color: white;
+}
+/* ===================================================== */
 
 /* Slogan */
 .slogan-index {
@@ -157,7 +236,7 @@ nav {
 }
 
 .section-animaux {
-  background-image: url("../img/animaux/kangourou.jpg");
+  background-image: url("../img/animaux/image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -186,8 +265,6 @@ nav {
   grid-row: 1 / 3;
 }
 
-
-
 .section-aventure {
   background-image: url("../img/aventure/john.jpg");
   background-repeat: no-repeat;
@@ -199,7 +276,7 @@ nav {
 }
 
 .section-sport {
-  background-image: url("../img/sport/sports.jpg");
+  background-image: url("../img/sport/image1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -249,82 +326,40 @@ hr {
   align-items: center;
 }
 
-  /* =============== Carrousel =============== */
-  .carrousel {
-    display: flex;
-    height: 80vh;
-    width: 100%;
-    overflow: hidden;
-  }
+.container-carrousel {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
 
-  .container-images {
-    display: flex;
-    width: 100%;
-    animation-duration: 30s;
-    animation-name: diapo;
-    animation-iteration-count: infinite;
-    background-position: center;
-  }
+.slideshow-container {
+  position: relative;
+  width: 80%;
+}
 
-  img {
-    width: 100%;  /* Ajuste la largeur au conteneur */
-    height: 100%; /* Ajuste la hauteur au conteneur */
-    object-fit: cover; /* Remplit le conteneur sans déformation */
-    object-position: center; /* Centre l’image comme background-position */
-    display: block; /* Évite l’espace sous l’image */
-    margin: 2%;
-  }
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
+.active {
+  opacity: 1;
+}
 
-  @keyframes diapo {
-    0% {
-      transform: translateX(-90vh);
-    }
+.img-carrousel-js {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    10% {
-      transform: translateX(-90vh);
-    }
-
-    20% {
-      transform: translateX(-184vh);
-    }
-
-    30% {
-      transform: translateX(-184vh);
-    }
-
-    40% {
-      transform: translateX(-278vh);
-    }
-
-    50% {
-      transform: translateX(-278vh);
-    }
-
-    60% {
-      transform: translateX(-350vh);
-    }
-
-    70% {
-      transform: translateX(-350vh);
-    }
-
-    80% {
-      transform: translateX(-425vh);
-    }
-
-    90% {
-      transform: translateX(-425vh);
-    }
-
-    96% {
-      transform: translateX(-519vh);
-    }
-
-    100% {
-      transform: translateX(-519vh);
-    }
-  }
+img {
+  width: 100%;  
+  height: 100%; 
+  object-fit: cover; /* Remplit le conteneur sans déformation */
+  object-position: center; /* Centre l’image comme background-position */
+  display: block; /* Évite l’espace sous l’image */
+}
 
 /* =============== Galerie d'images =============== */
 .container-galerie-image {
@@ -335,6 +370,7 @@ hr {
     min-height: 100vh;
     background-color: #f4f4f4;
 }
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -342,6 +378,7 @@ hr {
     width: 100%;
     margin: 2% 2%;        
 }
+
 .gallery .img-galerie {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -354,24 +391,26 @@ hr {
   text-align: center;
 }  
 
-  .citation-einstein {
-    text-align: justify;
-    text-align-last: right;
-    width: 60%;
-    margin-top: 5%;
-    margin-right: auto;
-    margin-bottom: 5%;
-    margin-left: auto;
-  }
+.citation-einstein {
+  text-align: justify;
+  text-align-last: right;
+  width: 60%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-bottom: 5%;
+  margin-left: auto;
+}
 
-  .nom-citation {
-    text-align: end;
-  }
+.nom-citation {
+  text-align: end;
+}
 
 /* =============== Page portrait =============== */
 .disposition-grand-text {
   display: flex;
   justify-content: center;
+  text-align: start;
+  margin: 0% 8%;
 } 
 
 .container-presentation-prestation-portrait {
@@ -456,9 +495,9 @@ hr {
 
 /* =============== Page Aventure =============== */
 .img-presentation-aventure {
-  height: 100vh;
-  width: auto;
-  margin: 0%;}
+  width: 80%;
+  margin: 0%;
+}
 
 .titre-aventure {
   margin-top: 5%;
@@ -470,16 +509,19 @@ hr {
 }
 
 .container-aventure {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   background-color: rgb(241, 220, 209);
   padding: 20px;
   max-width: 90%;
   margin: 3%;
 }
 
+.paraf-paysage-texte-responsive {
+  width: 70%;
+  display: inline-block;
+}
+
 .column {
-  flex: 1;
   text-align: center;
   padding: 10px;
 }
@@ -495,10 +537,17 @@ hr {
   align-items: center;
 }
 
-.image-container-aventure, .aventure-image {
-  width: 100%;
-  height: 54%;
-  margin-bottom: 10px;  
+.image-container-aventure {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 10em;
+}
+
+.aventure-image {
+    width: 33%;
+    height: auto;
+    margin: 0% 1%;
 }
 
 .evenement-aventure {
@@ -541,14 +590,13 @@ hr {
   background: #ccc;
   margin: 10px 0;
 }
+
 /* =============== Bouton javascript galerie photo =============== */
 .modal {
- /* position: fixed;*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
- /* background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
   backdrop-filter: blur(10px); /* Effet flou */
   display: flex;
   display: none; /* Caché par défaut */
@@ -576,6 +624,7 @@ hr {
 .close:hover {
   color: red;
 }
+
 /* =============== Bouton galerie photo ================*/
 .bouton-galerie-photo {
   margin: 0;
@@ -615,6 +664,7 @@ transform: translate(-5px, -5px);
 .bouton-galerie-photo:hover::before {
 transform: translate(5px, 5px);
 }
+
 /* =============== Bouton en savoir plus =============== */
 .savoirplus {
   cursor:pointer;
@@ -622,7 +672,6 @@ transform: translate(5px, 5px);
   background: white;
   border: 1px solid rgb(186, 186, 186);
   border-style: thin;
-  font-size: 15px;
   letter-spacing: 3px;
   width: 50vh;
   height: 9vh;
@@ -675,12 +724,9 @@ transform: translate(5px, 5px);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 45em;
-
   /* Masque avec un dégradé */
   -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, transparent);
   mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 90%, transparent);
- 
 }
 
 .form-display {
@@ -690,6 +736,7 @@ transform: translate(5px, 5px);
   margin-left: auto;
   margin-right: auto;
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .champ1 {                              
@@ -718,7 +765,7 @@ transform: translate(5px, 5px);
 
 .send:hover {
   color: white;
-  background: rgb(143, 129, 117);
+  background: rgb(143, 143, 117);
   transition-duration: 0.3s;
 }
 
@@ -731,10 +778,10 @@ footer {
   display: grid;
   align-items: center;
   text-align: center;
-  grid-template-columns: auto 600px auto;
+  grid-template-columns: auto 50% auto;
   color: rgb(203, 196, 196);
   background: rgb(227, 227, 227);
-  height: 150px;
+  height: auto;
 }
 
 .img-footer {
@@ -744,7 +791,8 @@ footer {
 
 .foot1 {
   color: black;
-  font-size: 15px;
+  font-size: 0.9em;
+  font-family: 'Cinzel', serif;
 }
   
 .foot2 {
@@ -757,7 +805,9 @@ footer {
 .foot3 {
   background: white;
   padding-top: 10%;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 0%;
+  padding-right: 0%;
   padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
 }

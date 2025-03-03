@@ -1,6 +1,28 @@
-<section class="carrousel">
-<div class="container-images" id="gallery1"></div>
-</section><br>
+
+<script>
+  // Sélectionne toutes les images du carrousel
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".img-carrousel-js");
+    
+    // Tableau avec les variables des numéros d'images
+    const imageNumbers = [a, b, c];
+
+    images.forEach((img, index) => {
+      if (imageNumbers[index] !== undefined) {
+        img.src = `img/${nameGalerie}/image${imageNumbers[index]}.jpg`;
+      }
+    });
+  });
+</script>
+
+<section class="container-carrousel">
+    <div class="slideshow-container">
+        <img class="img-carrousel-js slide active" src="" alt="Image 1">
+        <img class="img-carrousel-js slide" src="" alt="Image 2">
+        <img class="img-carrousel-js slide" src="" alt="Image 3">
+    </div>
+</section>
+
 
 <section class="bouton-galerie">
   <button class="bouton-galerie-photo police3" onclick="openModal()">Voir la galerie</button>
@@ -11,8 +33,7 @@
   <div class="modal-content">
     <span class="close" onclick="closeModal()">✖</span>
     <aside class="container-galerie-image">
-    <!-- Les images portrait sont en 100px 200px. Les images en paysages sont en 200px 100px -->
-    <div class="gallery" id="gallery2"></div>
+    <div class="gallery" id="gallery"></div>
     </aside>
   </div>
 </div>

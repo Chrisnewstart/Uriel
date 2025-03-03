@@ -1,6 +1,6 @@
 <!-- navigation pc -->
   <nav>
-  <ul class="container-nav police1">
+  <ul class="container-nav police3">
     <li class="poiter"><a href="?page=paysage">paysage</a></li>
     <li class="poiter"><a href="?page=portrait">portrait</a></li>
     <li class="poiter"><a href="?page=aventure">aventure</a></li>
