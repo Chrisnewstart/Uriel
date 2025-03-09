@@ -1,5 +1,5 @@
 <div class="container-image-backgroung-nav">
-  <h1 class="texte-container-image-backgroung-nav police1">Photographe portrait & paysage </h1>
+  <h1 class="texte-container-image-backgroung-nav police1">photographe portrait, paysage, sport, randonnée</h1>
 </div>
 
 <section class="slogan-index">
@@ -38,7 +38,7 @@
 <section class="video-container">
 <div class="description-iframe">
     <p class="police2">Best of 2021</p>
-    <h2 class="police1">portrait</h2> 
+    <h3 class="police1">portrait</h3> 
   </div>
   <video class="iframe-page-index" controls>
     <source src="video/file.mp4" type="video/mp4">

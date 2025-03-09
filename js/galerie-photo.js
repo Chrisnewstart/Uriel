@@ -2,7 +2,7 @@
 // Ce code récupère dans des variables, le nom (instancier sur chaque page recevant le carrousel) avec un ID (gallery).
 
 const imageFolder = `img/${nameGalerie}/`; // Insère nameGalerie dans le chemin
-const imageCount = 7; // Nombre d'images à afficher
+const imageCount = 9; // Nombre d'images à afficher
 
 // Récupération des ID
 const gallery = document.getElementById("gallery");

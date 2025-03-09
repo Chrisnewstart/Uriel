@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photographe de portrait</title>
-  <meta name="description" content="Le photographe Uriel vous propose des prestations photo de portrait, paysage et aventure"/>
+  <title>Photographe de Portrait | Paysage | Sport | Aventure</title>
+  <meta name="description" content="Découvrez la photographie intense d'immersion au cœur de la nature"/>
   <link rel="shortcut icon" type="image/png" href="upload/logo/png.png" alt="logo site web uriel"/>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
@@ -19,14 +18,13 @@
 <body>
 
 <header>
-<div id="navbar-container"></div>
+<nav id="navbar-container"></nav>
 
 <script>
   loadNavbar();
   attachMenuToggle();
   window.addEventListener("resize", loadNavbar);
 </script>
-
 
 <?php 
 /* Code de secour si JS plante pour la navigation le temps de regler le probleme */
@@ -74,6 +72,15 @@ switch ($page) {
 }
 ?>
 </main>
+
+<section class="social-bar">
+  <a href="https://www.facebook.com/urielphotographe" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" class="social-icon">
+  </a>
+  <a href="https://www.instagram.com/urielshoot/#" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+  </a>
+</section>
 
 <footer>
   <?php include('includes/footer.php'); ?>

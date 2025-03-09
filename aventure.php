@@ -8,7 +8,7 @@
 
 <section class="container-aventure police2">
   <div class="column">
-    <p><h3>Exploration photo</h3>
+    <p><h2>Exploration photo</h2>
       Je vous accompagne durant vos expéditions pour vous créer un portfolio unique. Les images pourront être tirées dans un album ou en tirage sur papier artistique (papier Fine Art)     
       Si vous aimez partir à l'aventure seule, avec vos amies, ou peut-être adepte des GR n'hésitez pas à me contacter pour plus de renseignements. Certaines aventures ne se vivent qu'une fois, oubliez les photos faites au téléphone, optez pour des souvenirs mémorables.</p>
       <div class="column">
@@ -19,7 +19,7 @@
         </div>
       </div><br>
 
-      <h3>Randonnée photo</h3>
+      <h1>Randonnée photo</h1>
       L'exploration photo n'étant pas gratuite car celle-ci propose des prestations professionnelles, tirage photo, rendu sur clef, etc..
       La Randonnée photo quant à elle est entièrement gratuite. Vous ne savez pas où aller ? Je pars souvent quelques jours en randonnée
       pour photographier les paysages, que vous pouvez retrouver dans la rubrique paysage. Si vous souhaitez partir sans organisation ni

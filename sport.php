@@ -18,7 +18,7 @@
 </section>
 
 <section class="slogan-index">
-  <h2 class="police1">forfaits sport</h2>
+  <h4 class="police1">forfaits sport</h4>
 </section>
 
 <section class="container-presentation-prestation-portrait">
