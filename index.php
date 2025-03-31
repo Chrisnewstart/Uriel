@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photographe de Portrait | Paysage | Sport | Aventure</title>
+  <title>Uriel photographe normandie</title>
   <meta name="description" content="Découvrez la photographie intense d'immersion au cœur de la nature"/>
-  <link rel="shortcut icon" type="image/png" href="upload/logo/png.png" alt="logo site web uriel"/>
+  <link rel="shortcut icon" type="image/png" href="img/divers/ceo.png" alt="logo site web uriel"/>
+  <meta name="google-site-verification" content="P-iysOuwmw_WnrbJ_v0iYuVslYVmLErM2UIJ5VBz9nw" />
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">

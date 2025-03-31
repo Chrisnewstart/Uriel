@@ -22,17 +22,20 @@
 </section>
 
 <section class="container-presentation-prestation-portrait">
-  <div class="section-portrait-tarif section-forfait-sport1 survol-prestation-portrait">
+  <div class="section pos-prestation-1 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/sport/image3.webp" alt="Image contact">
     <h5 class="defaut police1">60€</h5>
-    <span class="survol-2 design-survol police2"><p>Tarif à l'heure<p>10 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
+    <span class="survol design-survol police2"><br>60€<p>Tarif à l'heure<p>10 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
   </div>
-  <div class="section-portrait-tarif section-forfait-sport2 survol-prestation-portrait">
+  <div class="section pos-prestation-2 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/sport/image2.webp" alt="Image contact">
     <h5 class="defaut police1">180€</h5>
-    <span class="survol-2 design-survol police2"><p>Tarif demi-journée<p>50 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
+    <span class="survol design-survol police2"><br>180€<p>Tarif demi-journée<p>50 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
   </div>
-  <div class="section-portrait-tarif section-forfait-sport3 survol-prestation-portrait">
+  <div class="section pos-prestation-3 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/sport/image1.webp" alt="Image contact">
     <h5 class="defaut police1">490€</h5>
-    <span class="survol-2 design-survol police2"><p>Tarif journée complète<p>300 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p><p>Photos sur CD ou clef USB</p><p>1 Tirage sur papier d'art 20X30cm</p></span>
+    <span class="survol design-survol police2"><br>490€<p>Tarif journée complète<p>300 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
   </div>
 </section>
 

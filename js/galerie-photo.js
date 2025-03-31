@@ -10,7 +10,7 @@ const gallery = document.getElementById("gallery");
 // Boucle pour gallery
 for (let i = 1; i <= imageCount; i++) {
   let img = document.createElement("img");
-  img.src = `${imageFolder}image${i}.jpg`; // Adapate format selon images
+  img.src = `${imageFolder}image${i}.webp`; // Adapate format selon images
   img.alt = `Image ${i}`;
   img.classList.add("img-galery"); // Ajoute une classe à l'image
   gallery.appendChild(img);

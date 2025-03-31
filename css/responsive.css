@@ -68,16 +68,9 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     padding-bottom: 8%;
   }
 
-  .section-portrait-tarif {
-    padding: 20px;
-    margin: 15px;
+  .taille-section-portrait {
+    margin: 20px 5px;
     height: 60vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
   }
 
   .slideshow-container {
@@ -114,18 +107,6 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     display: flex;
     justify-content: center;
     height: 50vh;
-  }
-
-  .section-portrait-tarif {
-    padding: 20px;
-    margin: 20px 5px;
-    height: 40vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-      transition: 0.5s;
   }
 
   .description-aventure {
@@ -181,9 +162,25 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     margin: 0% 8%;
     }
 
-  .survol-prestation-portrait .survol-2 {
-    display: block; 
+  .slideshow-container-dashboard {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 5% 2%;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
+
+  .defaut {
+    display: none;
+  }
+
+  .survol-prestation .survol {
+    display: block;
+}
+
 }
 
 /* Mobile */
@@ -192,16 +189,6 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10em 10em 10em 10em 10em 10em;
-  }
-
-  .section-portrait {
-    background-image: url(../img/portrait/image1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    grid-column: 1 / 3;
-    grid-row: 4 / 6;
   }
 
   .aventure-image {
@@ -219,22 +206,17 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     height: auto;
   }
 
-  .section-aventure {
-    background-image: url(../img/aventure/john.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+  .pos-portrait {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+  }
+  
+  .pos-aventure {
     grid-column: 1;
     grid-row: 6 / 7;
   }
 
-  .section-sport {
-    background-image: url(../img/sport/image1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+  .pos-sport {
     grid-column: 2;
     grid-row: 6 / 7;
   }
@@ -285,6 +267,32 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     padding-bottom: 5%;
     font-size: 12px;
   }
+
+  .slideshow-container-dashboard {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 20% 2%;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .download-button {
+    display: flex;
+    margin-top: 20%;
+    margin-right: auto;
+    margin-bottom: 15%;
+    margin-left: auto;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -315,18 +323,6 @@ de l'écran sera inférieure ou égale à 1600 pixels." */
     gap: 10px;
     width: 100%;
     margin: 2% 2%;
-  }
-
-  .section-portrait-tarif {
-    padding: 20px;
-    margin: 20px 5px;
-    height: 60vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
   }
 
   .logo {

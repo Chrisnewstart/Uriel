@@ -70,6 +70,8 @@ a {
 nav {
   padding-top: 2%;
   padding-bottom: 2%;
+  position: relative;
+  z-index: 10;
 }
   
 .container-nav {
@@ -93,23 +95,43 @@ nav {
   
 .itemlogo {
   width: 120px;
+  border-radius: 50px;
+}
+
+.itemlogo2 {
+  width: 120px;
 }
   
+/*** Position image fond page home ***/
+
 .container-image-backgroung-nav {
-  background-image: url("../img/divers/m.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
   width: 100%;
   height: 100vh;
   margin-top: -17%;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Place l'image en arrière-plan */
 }
 
 .texte-container-image-backgroung-nav {
   display: flex;
   justify-content: center;
   padding-top: 92vh;
+  position: relative; /* Assure que le texte reste au-dessus de l'image */
+  z-index: 1; /* Garde le texte visible */
+  text-align: center;
 }
+/******/
+
   
 /* Taille img */
 .img-size-nav {
@@ -159,7 +181,7 @@ nav {
 }
 
 .menu-content {
-  background-image: url("../img/divers/fond-menu.jpg");
+  background-image: url("../img/divers/fond-menu.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;  padding: 20px;
@@ -202,15 +224,16 @@ nav {
   padding: 3%;
   font-size: 1.5rem;
 }
-  
-/* Presentation des préstations */
+
+/* =============== Modification css images home  =============== */
 .container-presentation-prestation {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 10em 10em 10em;
-}
-  
+}  
+
 .section {
+  position: relative;
   padding: 20px;
   margin: 10px;
   text-align: center;
@@ -219,75 +242,32 @@ nav {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  overflow: hidden;
 }
-  
-.section-contact {
-  background-image: url("../img/divers/mbr.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  grid-column: 1;
-  grid-row: 1;
+
+.section .img-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .section:hover {
-  transform: scale(1.1); /* scale agrandi l'image */
+  transform: scale(1.1);
+  transition-duration: 1s;
 }
 
-.section-animaux {
-  background-image: url("../img/animaux/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.section h5, .section a {
+  position: relative;
   color: #fff;
-  grid-column: 2;
-  grid-row: 1;
+  z-index: 2;
 }
 
-.section-paysage {
-  background-image: url("../img/paysage/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  grid-column: 1 / 3;
-  grid-row: 2 / 4;
-}
-
-.section-portrait {
-  background-image: url("../img/portrait/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  grid-column: 3 / 5;
-  grid-row: 1 / 3;
-}
-
-.section-aventure {
-  background-image: url("../img/aventure/john.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.section-sport {
-  background-image: url("../img/sport/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  grid-column: 4;
-  grid-row: 3;
-}
-  
 .survol-prestation .survol {
   display: none;
-  color: #fff;
 }
 
 .survol-prestation:hover .defaut {
@@ -295,8 +275,42 @@ nav {
 }
 
 .survol-prestation:hover .survol {
-  display: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.pos-contact {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.pos-animaux {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.pos-paysage {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.pos-portrait {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+
+.pos-aventure {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.pos-sport {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+/* =============== ============== */
 
 /* Separation hr */
 hr {
@@ -420,72 +434,24 @@ img {
   padding-right: 3%;
 }
 
-.section-portrait-tarif {
-  padding: 20px;
-  margin: 30px;
+.taille-section-portrait {
   height: 70vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-}
-
-
-.section-portrait-tarif:hover {
-  transform: scale(1.1); /* scale agrandi l'image */
-  transition-duration: 1s;
-}
-
-.survol-prestation-portrait .survol-2 {
-  display: none;
-
-}
-
-.survol-prestation-portrait:hover .defaut-portrait {
-  display: none;
-
-}
-
-.survol-prestation-portrait:hover .survol-2 {
-  display: initial;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .design-survol {
   color: rgb(9, 9, 9);
   background-color: #ffffffc3;
-  width: 100%;
-  height: 100%;
 }
 
-.section-forfait1 {
-  background-image: url("../img/portrait/image4.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+.pos-prestation-1 {
   grid-column: 1;
 }
 
-.section-forfait2 {
-  background-image: url("../img/portrait/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+.pos-prestation-2 {
   grid-column: 2;
 }
 
-.section-forfait3 {
-  background-image: url("../img/portrait/image3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+.pos-prestation-3 {
   grid-column: 3;
 }
 
@@ -692,7 +658,7 @@ transform: translate(5px, 5px);
 
 /* =============== Sport =============== */
 .section-forfait-sport1 {
-  background-image: url("../img/sport/image3.jpg");
+  background-image: url("../img/sport/image3.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -701,7 +667,7 @@ transform: translate(5px, 5px);
 }
 
 .section-forfait-sport2 {
-  background-image: url("../img/sport/image2.jpg");
+  background-image: url("../img/sport/image2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -710,7 +676,7 @@ transform: translate(5px, 5px);
 }
 
 .section-forfait-sport3 {
-  background-image: url("../img/sport/image1.jpg");
+  background-image: url("../img/sport/image1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -720,7 +686,7 @@ transform: translate(5px, 5px);
 
 /* ==================== Contact ==================== */
 .background-form-contact {
-  background-image: url("../img/contact/foutain.jpg");
+  background-image: url("../img/contact/foutain.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -794,6 +760,129 @@ input::placeholder {
 .social-icon:hover {
   transform: scale(1.2);
 }
+/* =============== Page dashboard =============== */
+.body-dashboard {
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.a2 {
+  display: flex;
+  align-items: center;
+  color: #3f3f3f;
+  text-decoration: none;
+}
+
+.a2:hover {
+  color: white;
+  color: #bababa;
+}
+
+.divGestion {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(218, 218, 218);
+  color: #3f3f3f;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.sectionCommentaires {
+  border: 2px solid rgb(52, 52, 52);
+  margin: 2%;
+}
+
+.titre {
+  text-align: center;
+  padding-bottom:1%;
+  border-bottom: 2px solid rgb(52, 52, 52);
+}
+
+.sectionCommentairesAvancer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;          
+}
+
+.divSectionCommentaireAvancer1 {
+  grid-row: 1;
+  grid-column:1;
+  padding:1%;
+}
+
+.divSectionCommentaireAvancer2 {
+  grid-row: 1;
+  grid-column:2/3;
+  padding:1%;
+}
+
+.slideshow-container-dashboard {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 5% 20%;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slideDashboard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.slideDashboard.active {
+  opacity: 1;
+}
+
+.img-dashboard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}        
+        
+.download-button {
+  display: flex;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-bottom: 5%;
+  margin-left: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #218838;
+}
+
+.disposition-texte-dashboard {
+  width: 60%;
+  margin: 0% auto 20% auto;
+}
+
 /* =============== Pied de page =============== */
 footer {
   display: grid;

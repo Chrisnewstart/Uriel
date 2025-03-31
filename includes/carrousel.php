@@ -9,7 +9,7 @@
 
     images.forEach((img, index) => {
       if (imageNumbers[index] !== undefined) {
-        img.src = `img/${nameGalerie}/image${imageNumbers[index]}.jpg`;
+        img.src = `img/${nameGalerie}/image${imageNumbers[index]}.webp`;
       }
     });
   });

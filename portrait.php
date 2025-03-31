@@ -23,17 +23,20 @@
 </section>
 
 <section class="container-presentation-prestation-portrait">
-  <div class="section-portrait-tarif section-forfait1 survol-prestation-portrait">
+  <div class="section pos-prestation-1 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/portrait/image4.webp" alt="Image contact">
     <h5 class="defaut police1">60€</h5>
-    <span class="survol-2 design-survol police2"><p>Shooting 1h<p>10 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
+    <span class="survol design-survol police2"><br>60€<p>Shooting 1h<p>10 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
   </div>
-  <div class="section-portrait-tarif section-forfait2 survol-prestation-portrait">
+  <div class="section pos-prestation-2 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/portrait/image1.webp" alt="Image contact">
     <h5 class="defaut police1">80€</h5>
-    <span class="survol-2 design-survol police2"><p>Shooting 1h30<p>15 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
+    <span class="survol design-survol police2"><br>80€<p>Shooting 1h30<p>15 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p></span>
   </div>
-  <div class="section-portrait-tarif section-forfait3 survol-prestation-portrait">
+  <div class="section pos-prestation-3 taille-section-portrait survol-prestation">
+    <img class="img-home" src="img/portrait/image3.webp" alt="Image contact">
     <h5 class="defaut police1">150€</h5>
-    <span class="survol-2 design-survol police2"><p>Shooting 2h<p>20 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p><p>1 Tirage sur papier d'art 20X30cm</p></span>
+    <span class="survol design-survol police2"><br>150€<p>Shooting 2h<p>20 photos retouchées</p><p>Galerie en ligne privée disponible pendant 15 jours</p><p>1 Tirage sur papier d'art 20X30cm</p></span>
   </div>
 </section>
 
